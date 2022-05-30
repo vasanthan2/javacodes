@@ -1,0 +1,65 @@
+
+import java.util.*;
+ 
+class RLEncoding
+{
+   public static void main(String[] args) 
+   {
+ 
+      Scanner sc = new Scanner(System.in);
+    
+	  int T = sc.nextInt();
+	  sc.nextLine();
+	  while(T>0)
+	  {
+		  
+		String str = sc.nextLine();
+		
+		GfG g = new GfG();
+		System.out.println(g.encode(str));
+		
+      
+        T--;
+	  }
+   }
+}
+
+
+
+
+class Vasanth
+ {
+	String encode(String str)
+	{
+        
+
+   
+        String k=str;
+        k=k+" ";
+        String output="";
+        int l=0;
+        for(int i=0;i<k.length();i++){
+            String t=""+k.charAt(i);
+            int count=0;
+            for(int j=i;j<k.length();j++){
+                if(t.equals(""+k.charAt(j))){
+                    count++;
+                }
+                else{
+                    output=output+t+String.valueOf(count);
+                    break;
+                }
+                l=j;
+            }
+            i=l;
+            
+        }
+      return output;
+        
+        
+        
+    }
+
+	}
+	
+ 
