@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        
+        Scanner d=new Scanner(System.in);
+        int a1=d.nextInt();
+        int a2=d.nextInt();
+        int a3=d.nextInt();
+        
+        
+        String a= Integer.toString(a1),b=Integer.toString(a2),c=Integer.toString(a3);
+        
+        int th[]={Integer.parseInt(""+a.charAt(0)),Integer.parseInt(""+b.charAt(0)),Integer.parseInt(""+c.charAt(0))};
+        int hu[]={Integer.parseInt(""+a.charAt(1)),Integer.parseInt(""+b.charAt(1)),Integer.parseInt(""+c.charAt(1))};
+        int te[]={Integer.parseInt(""+a.charAt(2)),Integer.parseInt(""+b.charAt(2)),Integer.parseInt(""+c.charAt(2))};
+        int on[]={Integer.parseInt(""+a.charAt(3)),Integer.parseInt(""+b.charAt(3)),Integer.parseInt(""+c.charAt(3))};
+        
+        Arrays.sort(th);
+        Arrays.sort(hu);
+        Arrays.sort(te);
+        Arrays.sort(on);
+        
+        int sult=(1000*th[0])+(100*hu[2])+(10*te[0])+(on[2]);
+        System.out.println(sult);
+    }
+}
