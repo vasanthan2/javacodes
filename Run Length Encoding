@@ -1,3 +1,10 @@
+/*
+Input:
+str = abbbcdddd
+Output: a1b3c1d4
+*/
+
+
 
 import java.util.*;
  
